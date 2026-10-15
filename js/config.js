@@ -20,4 +20,4 @@ window.DEMO_TARGET = "_top";
 
 /* Use cases hidden from this presentation until their live pages are ready (her call, Oct 15).
  * Remove an id from this list to bring its pages, cards and links back. */
-window.HIDE_CASES = ["cash-application", "engineering-release", "quality-root-cause"];
+window.HIDE_CASES = ["engineering-release", "quality-root-cause"];
