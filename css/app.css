@@ -680,3 +680,7 @@ a.rm__item--opp small svg { flex: 0 0 13px; width: 13px; height: 13px; margin-to
 .out.fx { border-radius: 14px; padding: 6px 8px; }
 :is(.block, .method, .ai-hero, .cta).fx:hover > .fx__b { opacity: .55; }
 .af-node.fx:hover { transform: translateY(-3px); }
+/* Fix: the hover border never paints over text; outcome rows grow with their text */
+.fx__b { z-index: -1; }
+.out.fx { height: auto; min-height: max-content; overflow: visible; }
+.out.fx:hover { transform: translateY(-2px); background: #fff; }
