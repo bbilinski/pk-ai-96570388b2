@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infor | Parkson: AI from roadmap to real</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="shell">
+
+  <header class="topbar">
+    <div class="lockup">
+      <span class="lockup__infor">infor</span><span class="lockup__bar"></span><span class="lockup__cust">PARKSON</span>
+      <span class="topbar__app">AI roadmap workspace</span>
+    </div>
+    <div class="topbar__right">Onsite workshop, day 3</div>
+  </header>
+
+  <div class="body">
+    <!-- Left navigation -->
+    <nav class="nav" aria-label="Session areas">
+      <div class="nav__toggle"><button id="nav-toggle" title="Collapse navigation" aria-label="Collapse navigation"><svg class="nav__icon" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button></div>
+      <a class="nav__item" data-go="home" href="#home"><svg class="nav__icon" viewBox="0 0 24 24"><path d="M3 10l9-7 9 7v10a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><span class="nav__text">Home</span></a>
+      <div class="nav__label">Session areas</div>
+      <a class="nav__item" data-go="ai" href="#ai"><span class="nav__num">1</span><span class="nav__text">AI at Infor</span></a>
+      <a class="nav__item" data-go="seen" href="#seen"><span class="nav__num">2</span><span class="nav__text">What you've seen</span></a>
+      <a class="nav__item" data-go="roadmap" href="#roadmap"><span class="nav__num">3</span><span class="nav__text">Your AI roadmap</span></a>
+      <div class="nav__group">
+        <a class="nav__item" data-go="real" data-toggle="1" href="#real"><span class="nav__num">4</span><span class="nav__text">Prototypes made real</span><svg class="nav__chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="nav__children">
+          <a class="nav__child" data-go="real-material-risk" href="#real-material-risk">4.1 Material Risk</a>
+          <a class="nav__child" data-go="real-project-margin" href="#real-project-margin">4.2 Project Margin</a>
+          <a class="nav__child" data-go="real-cash-application" href="#real-cash-application">4.3 Cash Application</a>
+          <a class="nav__child" data-go="real-engineering-release" href="#real-engineering-release">4.4 Engineering Release</a>
+          <a class="nav__child" data-go="real-quality-root-cause" href="#real-quality-root-cause">4.5 Quality Root Cause</a>
+        </div>
+      </div>
+      <a class="nav__item" data-go="next" href="#next"><span class="nav__num">5</span><span class="nav__text">Next steps</span></a>
+    </nav>
+
+    <main class="main">
+
+      <!-- ===================== HOME ===================== -->
+      <section class="page page--home" id="page-home">
+        <div class="hero">
+          <svg class="hero__svg" viewBox="0 0 1200 360" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="hg1" x1="0" x2="1"><stop offset="0" stop-color="#7b3fe4" stop-opacity="0"/><stop offset=".5" stop-color="#8f6bff"/><stop offset="1" stop-color="#2f9be8" stop-opacity="0"/></linearGradient>
+              <linearGradient id="hg2" x1="0" x2="1"><stop offset="0" stop-color="#2f6fe8" stop-opacity="0"/><stop offset=".5" stop-color="#5fb4ff"/><stop offset="1" stop-color="#7b3fe4" stop-opacity="0"/></linearGradient>
+            </defs>
+            <path stroke="url(#hg1)" d="M-40 300 C 260 180, 520 360, 800 210 S 1140 90, 1260 140"/>
+            <path stroke="url(#hg2)" d="M-40 250 C 300 120, 560 300, 820 170 S 1120 60, 1260 90"/>
+            <path stroke="url(#hg1)" d="M-40 330 C 240 250, 600 380, 860 250 S 1150 160, 1260 200"/>
+            <path stroke="url(#hg2)" d="M-40 200 C 330 90, 640 250, 900 120 S 1160 40, 1260 50"/>
+            <path stroke="url(#hg1)" d="M-40 350 C 380 300, 700 400, 960 300 S 1180 230, 1260 260"/>
+          </svg>
+          <div class="hero__inner">
+            <div class="hero__lockup"><span class="lockup__infor">infor</span><span class="lockup__bar"></span><span class="lockup__cust">PARKSON</span></div>
+            <h1 class="hero__title">AI at Parkson,<br><em>from roadmap to real</em></h1>
+            <p class="hero__sub">How Infor AI works, what you saw these 2 days, how we built your roadmap, and the prototypes we made real in a live Infor tenant.</p>
+            <div class="hero__day"><i></i>Day 3 &middot; AI roadmap discussion</div>
+          </div>
+          <div class="hero__chips" aria-hidden="true">
+            <span style="--d:0s">Material Risk</span>
+            <span style="--d:-1.2s">Project Margin</span>
+            <span style="--d:-2.4s">Cash Application</span>
+            <span style="--d:-3.6s">Engineering Release</span>
+            <span style="--d:-4.8s">Quality Root Cause</span>
+          </div>
+        </div>
+
+        <div class="cards cards--5">
+          <a class="card rv" data-go="ai" href="#ai"><span class="card__num">1</span>
+            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></div>
+            <h3 class="card__title">AI at Infor</h3><p class="card__desc">Agents and people, parts to outcomes, the path, and the stack.</p></a>
+          <a class="card rv rv-d1" data-go="seen" href="#seen"><span class="card__num">2</span>
+            <div class="card__icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div>
+            <h3 class="card__title">What you've seen these 2 days</h3><p class="card__desc">The AI moments from the workshop, and the questions you asked about them.</p></a>
+          <a class="card rv rv-d2" data-go="roadmap" href="#roadmap"><span class="card__num">3</span>
+            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
+            <h3 class="card__title">How we built your roadmap</h3><p class="card__desc">From your priorities to opportunities to 3 phases, starting on data LN already holds.</p></a>
+          <a class="card rv rv-d3" data-go="real" href="#real"><span class="card__num">4</span>
+            <div class="card__icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17.5h7M17.5 14v7"/></svg></div>
+            <h3 class="card__title">Prototypes made real</h3><p class="card__desc">5 use cases: the standard, what we heard from your team, and the live page in the tenant.</p></a>
+          <a class="card rv rv-d4" data-go="next" href="#next"><span class="card__num">5</span>
+            <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <h3 class="card__title">Next steps</h3><p class="card__desc">What we work on together from here.</p></a>
+        </div>
+      </section>
+
+      <!-- ===================== 1. AI AT INFOR ===================== -->
+      <section class="page" id="page-ai">
+        <div class="head"><div>
+          <div class="eyebrow">Area 1 &middot; AI at Infor</div>
+          <h1 class="title">AI at Infor, in 4 ideas</h1>
+          <p class="lede">The ideas Infor shared this week, made simple and applied to Parkson.</p>
+        </div></div>
+
+        <!-- 1. Agents and people -->
+        <div class="ai-hero rv">
+          <div class="ai-hero__text">
+            <div class="ai-k"><span>1</span>Agents and people working as one</div>
+            <h2 class="ai-hero__h">Agents do the work across the business. People oversee and decide.</h2>
+            <p class="ai-hero__built">Built to <b>execute, not just advise.</b></p>
+          </div>
+          <svg class="orbit" viewBox="0 0 560 300" role="img" aria-label="An agent and a person exchange work through your processes and data in LN">
+            <defs>
+              <radialGradient id="coreG" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#8f6bff"/><stop offset="1" stop-color="#3b2bb8"/></radialGradient>
+              <linearGradient id="agentG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6a2fe0"/><stop offset="1" stop-color="#2387e6"/></linearGradient>
+              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <ellipse class="orbit__ring" cx="280" cy="150" rx="250" ry="118"/>
+            <ellipse class="orbit__ring orbit__ring--2" cx="280" cy="150" rx="200" ry="92"/>
+            <path id="pTop" class="orbit__path" d="M110 150 C 160 60, 230 70, 280 150 S 400 60, 450 150"/>
+            <path id="pBot" class="orbit__path" d="M450 150 C 400 240, 330 230, 280 150 S 160 240, 110 150"/>
+            <circle r="6" fill="#a58bff" filter="url(#glow)"><animateMotion dur="3.2s" repeatCount="indefinite"><mpath href="#pTop"/></animateMotion></circle>
+            <circle r="4" fill="#7fb6ff" filter="url(#glow)"><animateMotion dur="3.2s" begin="-1.6s" repeatCount="indefinite"><mpath href="#pTop"/></animateMotion></circle>
+            <circle r="6" fill="#ff6b6f" filter="url(#glow)"><animateMotion dur="3.6s" begin="-0.8s" repeatCount="indefinite"><mpath href="#pBot"/></animateMotion></circle>
+            <circle class="core-pulse" cx="280" cy="150" r="58"/>
+            <circle cx="280" cy="150" r="54" fill="url(#coreG)"/>
+            <text x="280" y="146" class="orbit__core">LN</text>
+            <text x="280" y="166" class="orbit__core-s">your processes</text>
+            <circle cx="110" cy="150" r="44" fill="url(#agentG)"/>
+            <path d="M110 128l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#fff"/>
+            <text x="110" y="222" class="orbit__lbl">Agent</text>
+            <text x="110" y="240" class="orbit__sub">does the task</text>
+            <circle cx="450" cy="150" r="44" fill="#fff" stroke="#f1a3a5" stroke-width="2"/>
+            <circle cx="450" cy="140" r="10" fill="none" stroke="#DA1217" stroke-width="2.4"/>
+            <path d="M432 168c3-10 10-14 18-14s15 4 18 14" fill="none" stroke="#DA1217" stroke-width="2.4" stroke-linecap="round"/>
+            <text x="450" y="222" class="orbit__lbl">Person</text>
+            <text x="450" y="240" class="orbit__sub">oversees and decides</text>
+          </svg>
+        </div>
+
+        <!-- 2. Parts to outcomes -->
+        <div class="block rv">
+          <div class="ai-k"><span>2</span>From parts to outcomes</div>
+          <div class="p2o">
+            <div class="p2o__col p2o__parts">
+              <div class="p2o__head">Infor Velocity Suite</div>
+              <div class="part" style="--i:0"><b>Industry AI agents</b><small>Agents built for your industry</small></div>
+              <div class="part" style="--i:1"><b>Process mining</b><small>See how work really flows</small></div>
+              <div class="part" style="--i:2"><b>Automations</b><small>Take repeat steps off people</small></div>
+              <div class="part" style="--i:3"><b>GenAI</b><small>Ask, summarize and draft in context</small></div>
+              <div class="part" style="--i:4"><b>Insights and data</b><small>One place for your data</small></div>
+            </div>
+            <div class="p2o__mid" aria-hidden="true">
+              <svg viewBox="0 0 200 400" preserveAspectRatio="none">
+                <defs><linearGradient id="flowG" x1="0" x2="1"><stop offset="0" stop-color="#6a2fe0"/><stop offset="1" stop-color="#2387e6"/></linearGradient></defs>
+                <g class="p2o__lines">
+                  <path d="M0 52 C 60 52, 60 200, 100 200"/><path d="M0 126 C 60 126, 60 200, 100 200"/><path d="M0 200 L 100 200"/><path d="M0 274 C 60 274, 60 200, 100 200"/><path d="M0 348 C 60 348, 60 200, 100 200"/>
+                  <path d="M100 200 C 140 200, 140 67, 200 67"/><path d="M100 200 C 140 200, 140 159, 200 159"/><path d="M100 200 C 140 200, 140 241, 200 241"/><path d="M100 200 C 140 200, 140 333, 200 333"/>
+                </g>
+                <g class="p2o__flow">
+                  <path d="M0 52 C 60 52, 60 200, 100 200"/><path d="M0 126 C 60 126, 60 200, 100 200"/><path d="M0 200 L 100 200"/><path d="M0 274 C 60 274, 60 200, 100 200"/><path d="M0 348 C 60 348, 60 200, 100 200"/>
+                  <path d="M100 200 C 140 200, 140 67, 200 67"/><path d="M100 200 C 140 200, 140 159, 200 159"/><path d="M100 200 C 140 200, 140 241, 200 241"/><path d="M100 200 C 140 200, 140 333, 200 333"/>
+                </g>
+              </svg>
+              <div class="p2o__hub"><span>Agentic<br>enterprise</span></div>
+            </div>
+            <div class="p2o__col p2o__outs">
+              <div class="p2o__head">Outcomes</div>
+              <div class="out" style="--i:0"><i>1</i><div><b>Precise industry agents</b><small>Useful from day one</small></div></div>
+              <div class="out" style="--i:1"><i>2</i><div><b>Adaptive experiences</b><small>A screen fit to each role</small></div></div>
+              <div class="out" style="--i:2"><i>3</i><div><b>Autonomous orchestration</b><small>More work done, at scale</small></div></div>
+              <div class="out" style="--i:3"><i>4</i><div><b>Governed velocity</b><small>Speed with less business risk</small></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. The path -->
+        <div class="block rv">
+          <div class="ai-k"><span>3</span>The path</div>
+          <div class="path5">
+            <div class="path5__track" aria-hidden="true"><i></i></div>
+            <div class="ps" style="--i:0"><div class="ps__dot">1</div><div class="ps__n">Flip the switch</div><p>Turn on the GenAI Assistant and LN agents.</p></div>
+            <div class="ps" style="--i:1"><div class="ps__dot">2</div><div class="ps__n">Diagnose</div><p>Process mining on order to cash and procure to pay.</p></div>
+            <div class="ps ps--you" style="--i:2"><div class="ps__dot">3</div><div class="ps__n">Automate</div><p>Take repeat manual steps off your teams.</p>
+              <div class="ps__protos"><a data-go="real-cash-application" href="#real-cash-application">Cash Application</a><a data-go="real-engineering-release" href="#real-engineering-release">Engineering Release</a></div></div>
+            <div class="ps ps--you" style="--i:3"><div class="ps__dot">4</div><div class="ps__n">Transform</div><p>Agents work alongside planners, project managers and quality.</p>
+              <div class="ps__protos"><a data-go="real-material-risk" href="#real-material-risk">Material Risk</a><a data-go="real-project-margin" href="#real-project-margin">Project Margin</a><a data-go="real-quality-root-cause" href="#real-quality-root-cause">Quality Root Cause</a></div></div>
+            <div class="ps ps--value" style="--i:4"><div class="ps__dot">5</div><div class="ps__n">Value</div><p>Repeat the path on the next process.</p></div>
+            <div class="path5__you" aria-hidden="true"><span>Your 5 prototypes</span></div>
+          </div>
+        </div>
+
+        <!-- 4. The stack -->
+        <div class="block">
+          <div class="ai-k"><span>4</span>The stack</div>
+          <div class="stack5">
+            <div class="s5 s5--1 rv" style="--i:0"><div class="s5__name">Workspace<small>Where people work</small></div><div class="s5__pills"><span>Role-based</span><span>Exceptions first</span><span>Conversational</span></div></div>
+            <div class="s5 s5--2 rv" style="--i:1"><div class="s5__name">Agents and automation<small>Who does the task</small></div><div class="s5__pills"><span>Industry AI agents</span><span>Agent orchestration</span><span>RPA</span></div></div>
+            <div class="s5 s5--3 rv" style="--i:2"><div class="s5__name">GenAI and analytics<small>Who explains and finds</small></div><div class="s5__pills"><span>GenAI Assistant</span><span>Document capture</span><span>Analytics</span><span>AI and ML</span><span>Process mining</span></div></div>
+            <div class="s5 s5--4 rv" style="--i:3"><div class="s5__name">Data Fabric and ION API Gateway<small>The data, kept secure</small></div><div class="s5__pills"><span>Data Lake</span><span>ION</span><span>API Gateway</span><span>Single sign-on</span></div></div>
+            <div class="s5 s5--5 rv" style="--i:4"><div class="s5__name">LN<small>Your ERP</small></div><div class="s5__pills"><span>Projects</span><span>Manufacturing</span><span>Supply chain</span><span>Finance</span></div></div>
+          </div>
+        </div>
+
+        <p class="sources"><b>Sources:</b> Infor agentic enterprise slides shown on Day 1. Infor GenAI help: Use GenAI Assistant, p.1; Agents, p.1. Infor OS help: Infor Ming.le Homepages, p.1; Backend security, p.1. Infor Data Fabric User Guide, p.18 to 19.</p>
+      </section>
+
+      <!-- ===================== 2. WHAT YOU'VE SEEN ===================== -->
+      <section class="page" id="page-seen">
+        <div class="head"><div>
+          <div class="eyebrow">Area 2 &middot; Days 1 and 2</div>
+          <h1 class="title">What you've seen these 2 days</h1>
+          <p class="lede">AI finds the exception, gathers the records, and a person decides.</p>
+        </div></div>
+
+        <div class="days">
+          <div class="rv">
+            <div class="day__head"><span class="day__badge">Day 1</span><span class="day__date">Tuesday, October 13</span></div>
+            <div class="moments">
+              <div class="moment"><div class="moment__area">Opening</div><div class="moment__what">Find drift from the standard, automate manual steps, then add GenAI.</div></div>
+              <div class="moment"><div class="moment__area">Buying, quality, inventory</div><div class="moment__what">Agent compares alternate parts; a person picks.</div><div class="moment__heard">Does the BOM update itself? You decide.</div></div>
+              <div class="moment"><div class="moment__area">Sourcing and order to cash</div><div class="moment__what">Agent recommends sources; a console shows only the exceptions.</div></div>
+              <div class="moment"><div class="moment__area">Projects</div><div class="moment__what">GenAI summarizes projects and links to late purchase orders.</div><div class="moment__heard">Saves time in the production meeting.</div></div>
+              <div class="moment"><div class="moment__area">Sales and warehousing</div><div class="moment__what">Assistant flags orders that need attention; a trace shows every step.</div></div>
+            </div>
+          </div>
+          <div class="rv rv-d2">
+            <div class="day__head"><span class="day__badge">Day 2</span><span class="day__date">Wednesday, October 14</span></div>
+            <div class="moments">
+              <div class="moment"><div class="moment__area">Engineering</div><div class="moment__what">AI checklists and a change impact view before release.</div></div>
+              <div class="moment"><div class="moment__area">Purchasing</div><div class="moment__what">Assistant compares suppliers; Document Processor reads order confirmations.</div></div>
+              <div class="moment"><div class="moment__area">Finance</div><div class="moment__what">Exceptions caught before close; invoice capture with a 3-way match.</div></div>
+            </div>
+            <div class="clip" style="margin-top:8px"><video muted loop playsinline preload="metadata" poster="media/clip-roadmap-to-live-poster.jpg" src="media/clip-roadmap-to-live.mp4"></video><span class="clip__cap">From our video: from a roadmap line to a live page</span></div>
+          </div>
+        </div>
+
+        <div class="block rv">
+          <div class="block__title">What you asked about AI</div>
+          <div class="block__sub">These shaped how we built each prototype.</div>
+          <div class="themes">
+            <div class="theme"><div class="theme__k">Data first</div><p>Processes and data come first. Item details like safety stock and lead times need care.</p></div>
+            <div class="theme"><div class="theme__k">Control</div><p>Who manages what an agent learns, and how bad input comes out.</p></div>
+            <div class="theme"><div class="theme__k">A person decides</div><p>Your own limits on when a change needs a person.</p></div>
+            <div class="theme"><div class="theme__k">Your rules</div><p>Answers that follow your business rules, and text a person checks before it goes out.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== 3. ROADMAP ===================== -->
+      <section class="page" id="page-roadmap">
+        <div class="head"><div>
+          <div class="eyebrow">Area 3 &middot; Your AI roadmap</div>
+          <h1 class="title">How we built your roadmap</h1>
+          <p class="lede">We started from what your teams asked for, matched each ask to an AI opportunity, and put the opportunities in phases by what LN already holds.</p>
+        </div></div>
+
+        <div class="block rv" style="margin-top:0">
+          <div class="rm">
+            <div class="rm__col">
+              <div class="rm__head"><i>1</i>Your priorities</div>
+              <div class="rm__item rm__item--prio rv rv-d1">Know if a project can move: material, containers and shop</div>
+              <div class="rm__item rm__item--prio rv rv-d2">See margin while a project runs</div>
+              <div class="rm__item rm__item--prio rv rv-d3">Match payments and rank past-due invoices</div>
+              <div class="rm__item rm__item--prio rv rv-d4">One way to release a bill of material to buying</div>
+              <div class="rm__item rm__item--prio rv rv-d5">Quality out of email and PDFs</div>
+            </div>
+            <div class="rm__conn" aria-hidden="true"><span></span></div>
+            <div class="rm__col">
+              <div class="rm__head"><i>2</i>Opportunities</div>
+              <div class="rm__item rm__item--opp rv rv-d1">Material Risk and Shortage Prevention</div>
+              <div class="rm__item rm__item--opp rv rv-d2">Project Margin</div>
+              <div class="rm__item rm__item--opp rv rv-d3">Cash Application and Collections</div>
+              <div class="rm__item rm__item--opp rv rv-d4">Engineering Release Check</div>
+              <div class="rm__item rm__item--opp rv rv-d5">Root Cause and Containment</div>
+            </div>
+            <div class="rm__conn" aria-hidden="true"><span></span></div>
+            <div class="rm__col">
+              <div class="rm__head"><i>3</i>Phases</div>
+              <div class="phase phase--1 rv rv-d2">
+                <div class="phase__top"><span class="phase__n">Phase 1 &middot; Start now</span><span class="phase__when">On data LN already holds</span></div>
+                <div class="uc">Material Risk and Shortage Prevention<div class="tags"><span class="tag">Prototype</span><span class="tag">P1 Plan to Produce</span></div></div>
+                <div class="uc">Project Margin<div class="tags"><span class="tag">Prototype</span><span class="tag">P1 Plan to Project</span><span class="tag">High impact</span></div></div>
+                <div class="uc">Cash Application and Collections<div class="tags"><span class="tag">Prototype</span><span class="tag">P1 Order to Cash</span><span class="tag">High impact</span></div></div>
+              </div>
+              <div class="phase rv rv-d3">
+                <div class="phase__top"><span class="phase__n">Phase 2 &middot; After the foundation</span><span class="phase__when">Once processes are standard</span></div>
+                <ul><li>Engineering Release Check</li><li>Root Cause and Containment, once quality data is in LN</li><li>Production capacity loading</li></ul>
+              </div>
+              <div class="phase rv rv-d4">
+                <div class="phase__top"><span class="phase__n">Phase 3 &middot; New connections</span><span class="phase__when">Needs a new feed</span></div>
+                <ul><li>Container tracking from your carrier</li><li>Sales orders from your CRM into LN</li><li>Shop-floor data for quality</li></ul>
+                <div class="parking">Parking lot: AP invoice capture, since your current tool already reads most invoices.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block rv">
+          <div class="grid-2" style="align-items:center">
+            <div>
+              <div class="block__title">The method</div>
+              <div class="block__sub">The same 4 steps for every ask.</div>
+              <div class="steps" style="grid-template-columns:repeat(2,1fr)">
+                <div class="step"><h4>Listen</h4><p>Discovery sessions, the AI Adoption Hub and this workshop.</p></div>
+                <div class="step"><h4>Match</h4><p>Each ask to an AI use case, after checking what LN does today.</p></div>
+                <div class="step"><h4>Rank</h4><p>By impact, by how ready the data is, and by effort.</p></div>
+                <div class="step"><h4>Phase</h4><p>Quick wins first, on data LN already holds.</p></div>
+              </div>
+            </div>
+            <div class="clip"><video muted loop playsinline preload="metadata" poster="media/clip-roadmap-phases-poster.jpg" src="media/clip-roadmap-phases.mp4"></video><span class="clip__cap">From our video: an AI Adoption Hub roadmap, sample company</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== 4. PROTOTYPES MADE REAL ===================== -->
+      <section class="page" id="page-real">
+        <div class="head"><div>
+          <div class="eyebrow">Area 4 &middot; Prototypes made real</div>
+          <h1 class="title">From a standard use case to a live page</h1>
+          <p class="lede">Each prototype started as a standard use case. We tailored it with what we heard from your team, then built it as a page in an Infor demo tenant.</p>
+        </div></div>
+
+        <div class="grid-2" style="align-items:center">
+          <div class="clip rv"><video muted loop playsinline preload="metadata" poster="media/clip-roadmap-to-live-poster.jpg" src="media/clip-roadmap-to-live.mp4"></video><span class="clip__cap">From our video: from roadmap line to live tenant</span></div>
+          <div class="block rv rv-d1" style="margin-top:0">
+            <div class="block__title">3 stages on every page</div>
+            <div class="agentflow" style="margin-top:12px">
+              <div class="af-node"><b>1 &middot; Standard</b>The base use case, the same for every customer</div>
+              <div class="vlink"></div>
+              <div class="af-node af-node--person"><b>2 &middot; What we heard</b>Your team's words, from the sessions</div>
+              <div class="vlink"></div>
+              <div class="af-node af-node--ai"><b>3 &middot; Real in your tenant</b>A live page on Infor demo data, with a Demo button</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards" style="grid-template-columns:repeat(3,1fr)">
+          <a class="card rv" data-go="real-material-risk" href="#real-material-risk"><span class="card__num">4.1</span><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></div><h3 class="card__title">Material Risk and Shortage Prevention</h3><p class="card__desc">Can a project move, and do we have the material, the containers and the shop?</p><div class="tags"><span class="tag tag--live">In the demo tenant</span><span class="tag tag--p">Phase 1</span></div></a>
+          <a class="card rv rv-d1" data-go="real-project-margin" href="#real-project-margin"><span class="card__num">4.2</span><div class="card__icon"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3 class="card__title">Project Margin</h3><p class="card__desc">Which projects are losing margin, and why, while they still run.</p><div class="tags"><span class="tag tag--live">In the demo tenant</span><span class="tag tag--p">Phase 1</span></div></a>
+          <a class="card rv rv-d2" data-go="real-cash-application" href="#real-cash-application"><span class="card__num">4.3</span><div class="card__icon"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="13" rx="2"/><circle cx="12" cy="12.5" r="2.5"/><path d="M6 10v5M18 10v5"/></svg></div><h3 class="card__title">Cash Application and Collections</h3><p class="card__desc">Match payments to invoices and rank what to collect first.</p><div class="tags"><span class="tag tag--live">Built</span><span class="tag tag--p">Phase 1</span></div></a>
+          <a class="card rv rv-d3" data-go="real-engineering-release" href="#real-engineering-release"><span class="card__num">4.4</span><div class="card__icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M6 9v3a3 3 0 003 3h6"/><path d="M15 12l3 3-3 3"/></svg></div><h3 class="card__title">Engineering Release Check</h3><p class="card__desc">One check from the engineering bill of material to what buyers order.</p><div class="tags"><span class="tag tag--live">In the demo tenant</span><span class="tag tag--p">Phase 2</span></div></a>
+          <a class="card rv rv-d4" data-go="real-quality-root-cause" href="#real-quality-root-cause"><span class="card__num">4.5</span><div class="card__icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v3l2 2"/></svg></div><h3 class="card__title">Quality Root Cause</h3><p class="card__desc">Why a part failed, where else it sits, and what to change.</p><div class="tags"><span class="tag tag--live">In the demo tenant</span><span class="tag">Early</span></div></a>
+        </div>
+        <p class="note">All 5 run on Infor demo data, never Parkson data. Nothing writes to LN without a person.</p>
+      </section>
+
+      <!-- 4.1 Material Risk -->
+      <section class="page" id="page-real-material-risk">
+        <div class="head">
+          <div><div class="eyebrow">4.1 &middot; Phase 1 &middot; Plan to Produce</div>
+            <h1 class="title">Material Risk and Shortage Prevention</h1>
+            <p class="lede">Can a project move earlier, and do we have the material, the containers and the shop to do it?</p></div>
+          <a class="demo-btn" data-demo="material-risk" href="#">Demo<svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+        <div class="stages">
+          <div class="stage rv"><div class="stage__k"><i>1</i>Standard</div><div class="stage__h">Material Risk and Shortage Prevention Agent</div>
+            <ul><li>Watches long-lead and critical parts</li><li>Flags shortage risk weeks before production</li><li>Recommends fixes to the planner</li></ul><div class="shots"><button class="shot" type="button" data-full="media/mr-proto.jpg" aria-label="Enlarge: Material Risk prototype, Schedule change tab"><img src="media/mr-proto.jpg" alt="Material Risk prototype, Schedule change tab" loading="lazy"><span class="shot__cap">Star Forge prototype</span></button></div></div>
+          <div class="stage-conn" aria-hidden="true"><span></span></div>
+          <div class="stage stage--heard rv rv-d2"><div class="stage__k"><i>2</i>What we heard</div><div class="stage__h">A pull-in question takes hours to answer</div>
+            <ul><li><b>Pull-ins take hours.</b> Moving a project earlier means checking material on hand, material coming and shop capacity.</li><li><b>Containers by hand.</b> Container buying works from backlog, on-hand and on-order reports.</li><li><b>Freight is hard to see.</b> Ocean freight is hard to trace today.</li><li><b>Labor sets capacity.</b> Capacity is planned by labor, and pushing an order out is an option too.</li></ul></div>
+          <div class="stage-conn" aria-hidden="true"><span></span></div>
+          <div class="stage stage--real rv rv-d4"><div class="stage__k"><i>3</i>Real in your tenant</div><div class="stage__h">Schedule change, Material and containers, Shop load</div>
+            <ul><li>Ranks projects by weeks to the first shortage</li><li>Shows item coverage and a 10-week look-ahead</li><li>Shows order lines that land after the need date, and shop load by week</li><li>The assistant reruns the check at a new date; a person decides in LN</li></ul><div class="shots shots--2"><button class="shot" type="button" data-full="media/mr-real.jpg" aria-label="Enlarge: Material Risk live page, project material risk tab"><img src="media/mr-real.jpg" alt="Material Risk live page, project material risk tab" loading="lazy"><span class="shot__cap">Live: Material risk</span></button><button class="shot" type="button" data-full="media/mr-real-shop.jpg" aria-label="Enlarge: Material Risk live page, shop load tab"><img src="media/mr-real-shop.jpg" alt="Material Risk live page, shop load tab" loading="lazy"><span class="shot__cap">Live: Shop load</span></button></div>
+            <div class="stage__foot">Reads only. Containers show as an example until a carrier feed is connected.</div></div>
+        </div>
+        <div class="block rv"><div class="block__title">How the live page runs</div><div class="flow4"><div class="fl fl--1" style="--i:0"><div class="fl__ic"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div><div class="fl__k">1 &middot; LN data</div><div class="fl__t">Reads projects, orders, stock and work centers in LN</div></div><div class="fl-conn" style="--i:0" aria-hidden="true"><i></i></div><div class="fl fl--2" style="--i:1"><div class="fl__ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M11 8v3M11 14h.01"/></svg></div><div class="fl__k">2 &middot; Find</div><div class="fl__t">Finds each project's first shortage</div></div><div class="fl-conn" style="--i:1" aria-hidden="true"><i></i></div><div class="fl fl--3" style="--i:2"><div class="fl__ic"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></div><div class="fl__k">3 &middot; GenAI</div><div class="fl__t">Assistant reruns the check at a new date</div></div><div class="fl-conn" style="--i:2" aria-hidden="true"><i></i></div><div class="fl fl--4" style="--i:3"><div class="fl__ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M2 21v-1a6 6 0 016-6h2"/><path d="M15 18l2 2 4-4"/></svg></div><div class="fl__k">4 &middot; Person</div><div class="fl__t">The planner decides in LN</div></div></div></div>
+        <div class="meta-row" style="margin-top:20px"><span class="tag tag--p">Prototype</span><span class="tag tag--p">P1 Plan to Produce</span><span class="tag tag--live">In the demo tenant</span></div>
+      </section>
+
+      <!-- 4.2 Project Margin -->
+      <section class="page" id="page-real-project-margin">
+        <div class="head">
+          <div><div class="eyebrow">4.2 &middot; Phase 1 &middot; Plan to Project</div>
+            <h1 class="title">Project Margin</h1>
+            <p class="lede">Which projects are losing margin, and why, while they are still running?</p></div>
+          <a class="demo-btn" data-demo="project-margin" href="#">Demo<svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+        <div class="stages">
+          <div class="stage rv"><div class="stage__k"><i>1</i>Standard</div><div class="stage__h">Project Margin Agent</div>
+            <ul><li>Compares baseline and forecast margin across projects and contracts</li><li>Uses cost forecasts and estimates at completion</li></ul><div class="shots"><button class="shot" type="button" data-full="media/pm-proto.jpg" aria-label="Enlarge: Project Margin prototype, portfolio"><img src="media/pm-proto.jpg" alt="Project Margin prototype, portfolio" loading="lazy"><span class="shot__cap">Star Forge prototype</span></button></div></div>
+          <div class="stage-conn" aria-hidden="true"><span></span></div>
+          <div class="stage stage--heard rv rv-d2"><div class="stage__k"><i>2</i>What we heard</div><div class="stage__h">Margin shows up too late</div>
+            <ul><li><b>Margin shows late.</b> Project managers see true profitability only after a project closes.</li><li><b>A top KPI.</b> Margin should lead the dashboard, with issues visible while the project runs.</li><li><b>Hours off budget.</b> Flag hours running at 2 times or half their budget.</li><li><b>Blurred costs.</b> Outside fabrication and freight blur the cost picture until job close.</li></ul></div>
+          <div class="stage-conn" aria-hidden="true"><span></span></div>
+          <div class="stage stage--real rv rv-d4"><div class="stage__k"><i>3</i>Real in your tenant</div><div class="stage__h">Portfolio and Cost breakdown</div>
+            <ul><li>Ranks active projects by margin points lost against the margin they were won at</li><li>Flags activities at 2 times or half their budgeted hours</li><li>Shows 8 weeks of planned shop hours</li></ul><div class="shots"><button class="shot" type="button" data-full="media/pm-real.jpg" aria-label="Enlarge: Project Margin live page, portfolio tab"><img src="media/pm-real.jpg" alt="Project Margin live page, portfolio tab" loading="lazy"><span class="shot__cap">Live page: Portfolio</span></button></div>
+            <div class="stage__foot">Reads live demo projects. More tabs are in design.</div></div>
+        </div>
+        <div class="block rv"><div class="block__title">How the live page runs</div><div class="flow4"><div class="fl fl--1" style="--i:0"><div class="fl__ic"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div><div class="fl__k">1 &middot; LN data</div><div class="fl__t">Reads projects, budgets and hours in LN</div></div><div class="fl-conn" style="--i:0" aria-hidden="true"><i></i></div><div class="fl fl--2" style="--i:1"><div class="fl__ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M11 8v3M11 14h.01"/></svg></div><div class="fl__k">2 &middot; Find</div><div class="fl__t">Ranks projects by margin points lost</div></div><div class="fl-conn" style="--i:1" aria-hidden="true"><i></i></div><div class="fl fl--3" style="--i:2"><div class="fl__ic"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></div><div class="fl__k">3 &middot; GenAI</div><div class="fl__t">Flags hours at 2 times or half the budget</div></div><div class="fl-conn" style="--i:2" aria-hidden="true"><i></i></div><div class="fl fl--4" style="--i:3"><div class="fl__ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M2 21v-1a6 6 0 016-6h2"/><path d="M15 18l2 2 4-4"/></svg></div><div class="fl__k">4 &middot; Person</div><div class="fl__t">The project manager acts in LN</div></div></div></div>
+        <div class="meta-row" style="margin-top:20px"><span class="tag tag--p">Prototype</span><span class="tag tag--p">P1 Plan to Project</span><span class="tag tag--hi">High impact</span><span class="tag tag--live">In the demo tenant</span></div>
+      </section>
+
+      <!-- 4.3 Cash Application -->
+      <section class="page" id="page-real-cash-application">
+        <div class="head">
+          <div><div class="eyebrow">4.3 &middot; Phase 1 &middot; Order to Cash</div>
+            <h1 class="title">Cash Application and Collections</h1>
+            <p class="lede">Match payments to invoices, and rank what to collect first.</p></div>
+          <a class="demo-btn" data-demo="cash-application" href="#">Demo<svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+        <div class="stages">
+          <div class="stage rv"><div class="stage__k"><i>1</i>Standard</div><div class="stage__h">Accounts Receivable Agent</div>
+            <ul><li>Tracks receivables, invoices, payments and customer credit</li><li>Answers through the GenAI Assistant</li></ul><div class="shots"><button class="shot" type="button" data-full="media/ca-proto.jpg" aria-label="Enlarge: Cash Application prototype, cash picture tab"><img src="media/ca-proto.jpg" alt="Cash Application prototype, cash picture tab" loading="lazy"><span class="shot__cap">Star Forge prototype</span></button></div></div>
+          <div class="stage-conn" aria-hidden="true"><span></span></div>
+          <div class="stage stage--heard rv rv-d2"><div class="stage__k"><i>2</i>What we heard</div><div class="stage__h">Payments and reminders run by hand</div>
+            <ul><li><b>One payment, many invoices.</b> One payment can cover several invoices, sometimes with no invoice reference.</li><li><b>A set order.</b> Start with invoices 30 or more days past due, then reminder 1, 2 and 3, then escalation.</li><li><b>Retention.</b> Retention is withheld on some invoices.</li><li><b>Show the work.</b> People want to see the agent working.</li></ul></div>
+          <div class="stage-conn" aria-hidden="true"><span></span></div>
+          <div class="stage stage--real rv rv-d4"><div class="stage__k"><i>3</i>Real in your tenant</div><div class="stage__h">Cash application, Work queue, Receivables</div>
+            <ul><li>Lists receipts LN didn't match, and suggests an invoice only on an exact, single match</li><li>A person approves the match in LN</li><li>Ranks invoices 30 or more days past due and names the next reminder</li><li>Shows aging and the customers with the most past due</li></ul><div class="shots"><button class="shot" type="button" data-full="media/ca-real.jpg" aria-label="Enlarge: Cash Application live page, cash application tab"><img src="media/ca-real.jpg" alt="Cash Application live page, cash application tab" loading="lazy"><span class="shot__cap">Live page: Cash application</span></button></div>
+            <div class="stage__foot">Reads only.</div></div>
+        </div>
+        <div class="block rv"><div class="block__title">How the live page runs</div><div class="flow4"><div class="fl fl--1" style="--i:0"><div class="fl__ic"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div><div class="fl__k">1 &middot; LN data</div><div class="fl__t">Reads receipts and open invoices in LN</div></div><div class="fl-conn" style="--i:0" aria-hidden="true"><i></i></div><div class="fl fl--2" style="--i:1"><div class="fl__ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M11 8v3M11 14h.01"/></svg></div><div class="fl__k">2 &middot; Find</div><div class="fl__t">Suggests a match only when it is exact</div></div><div class="fl-conn" style="--i:1" aria-hidden="true"><i></i></div><div class="fl fl--3" style="--i:2"><div class="fl__ic"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></div><div class="fl__k">3 &middot; GenAI</div><div class="fl__t">Ranks past-due invoices and the next reminder</div></div><div class="fl-conn" style="--i:2" aria-hidden="true"><i></i></div><div class="fl fl--4" style="--i:3"><div class="fl__ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M2 21v-1a6 6 0 016-6h2"/><path d="M15 18l2 2 4-4"/></svg></div><div class="fl__k">4 &middot; Person</div><div class="fl__t">A person approves in LN</div></div></div></div>
+        <div class="meta-row" style="margin-top:20px"><span class="tag tag--p">Prototype</span><span class="tag tag--p">P1 Order to Cash</span><span class="tag tag--hi">High impact</span><span class="tag tag--live">Built</span></div>
+      </section>
+
+      <!-- 4.4 Engineering Release -->
+      <section class="page" id="page-real-engineering-release">
+        <div class="head">
+          <div><div class="eyebrow">4.4 &middot; Phase 2</div>
+            <h1 class="title">Engineering Release Check</h1>
+            <p class="lede">One check from the engineering bill of material to what buyers order.</p></div>
+          <a class="demo-btn" data-demo="engineering-release" href="#">Demo<svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+        <div class="stages">
+          <div class="stage rv"><div class="stage__k"><i>1</i>Standard</div><div class="stage__h">Change Impact Intelligence Agent</div>
+            <ul><li>Predicts what an engineering change does to cost, inventory, suppliers and customers</li><li>Runs before release</li></ul><div class="shots"><button class="shot" type="button" data-full="media/er-proto.jpg" aria-label="Enlarge: Engineering Release Check prototype, one way in tab"><img src="media/er-proto.jpg" alt="Engineering Release Check prototype, one way in tab" loading="lazy"><span class="shot__cap">Star Forge prototype</span></button></div></div>
+          <div class="stage-conn" aria-hidden="true"><span></span></div>
+          <div class="stage stage--heard rv rv-d2"><div class="stage__k"><i>2</i>What we heard</div><div class="stage__h">Getting the right BOM to production</div>
+            <ul><li><b>Built by hand.</b> Custom bills of material are built by hand every day.</li><li><b>Many methods.</b> Each group loads bills of material its own way, and custom parts get recreated.</li><li><b>Errors repeat.</b> Floor errors are fixed by walking to the engineer, and come back when jobs are copied.</li><li><b>Start simple.</b> Begin with simple workflows.</li></ul></div>
+          <div class="stage-conn" aria-hidden="true"><span></span></div>
+          <div class="stage stage--real rv rv-d4"><div class="stage__k"><i>3</i>Real in your tenant</div><div class="stage__h">Overview, Purchasing, Reuse</div>
+            <ul><li>Ranks projects by changed, subcontracted or late purchase lines</li><li>Finds customized items that copy an existing standard item</li><li>Walks through an example release; a person decides in LN</li></ul>
+            <div class="stage__foot">In the demo tenant. Reads only.</div></div>
+        </div>
+        <div class="block rv"><div class="block__title">How the live page runs</div><div class="flow4"><div class="fl fl--1" style="--i:0"><div class="fl__ic"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div><div class="fl__k">1 &middot; LN data</div><div class="fl__t">Reads project purchase lines and items in LN</div></div><div class="fl-conn" style="--i:0" aria-hidden="true"><i></i></div><div class="fl fl--2" style="--i:1"><div class="fl__ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M11 8v3M11 14h.01"/></svg></div><div class="fl__k">2 &middot; Find</div><div class="fl__t">Flags changed, subcontracted and late lines</div></div><div class="fl-conn" style="--i:1" aria-hidden="true"><i></i></div><div class="fl fl--3" style="--i:2"><div class="fl__ic"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></div><div class="fl__k">3 &middot; GenAI</div><div class="fl__t">Finds custom items that copy a standard one</div></div><div class="fl-conn" style="--i:2" aria-hidden="true"><i></i></div><div class="fl fl--4" style="--i:3"><div class="fl__ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M2 21v-1a6 6 0 016-6h2"/><path d="M15 18l2 2 4-4"/></svg></div><div class="fl__k">4 &middot; Person</div><div class="fl__t">Engineering decides in LN</div></div></div></div>
+        <div class="meta-row" style="margin-top:20px"><span class="tag tag--p">Prototype</span><span class="tag tag--p">Phase 2</span><span class="tag tag--live">In the demo tenant</span></div>
+      </section>
+
+      <!-- 4.5 Quality Root Cause -->
+      <section class="page" id="page-real-quality-root-cause">
+        <div class="head">
+          <div><div class="eyebrow">4.5 &middot; Phase 2 &middot; Early</div>
+            <h1 class="title">Quality Root Cause</h1>
+            <p class="lede">Why a part failed, where else it sits, and what to change. Lighter for now: your quality records apply once they are in LN.</p></div>
+          <a class="demo-btn" data-demo="quality-root-cause" href="#">Demo<svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+        <div class="stages">
+          <div class="stage rv"><div class="stage__k"><i>1</i>Standard</div><div class="stage__h">Root Cause and Containment Agent</div>
+            <ul><li>Explains causes of quality issues across production, materials and operations</li><li>Recommends containment and corrective actions</li></ul><div class="shots"><button class="shot" type="button" data-full="media/rc-proto.jpg" aria-label="Enlarge: Root Cause prototype, root cause tab"><img src="media/rc-proto.jpg" alt="Root Cause prototype, root cause tab" loading="lazy"><span class="shot__cap">Star Forge prototype</span></button></div></div>
+          <div class="stage-conn" aria-hidden="true"><span></span></div>
+          <div class="stage stage--heard rv rv-d2"><div class="stage__k"><i>2</i>What we heard</div><div class="stage__h">Quality runs outside LN</div>
+            <ul><li><b>Outside LN.</b> Quality checks run through email and PDFs.</li><li><b>Manual reports.</b> Nonconformance handling is manual.</li><li><b>Suppliers too.</b> Return to vendor and vendor quality scoring came up for today.</li></ul></div>
+          <div class="stage-conn" aria-hidden="true"><span></span></div>
+          <div class="stage stage--real rv rv-d4"><div class="stage__k"><i>3</i>Real in your tenant</div><div class="stage__h">Root cause, Containment, Corrective plan</div>
+            <ul><li>Ranks open reports by severity and reads the order line, receipt, inspections and lots</li><li>Scores likely causes; the score is calculated, not written by GenAI</li><li>Scopes blocked stock, orders and shipments; a person decides</li></ul><div class="shots"><button class="shot" type="button" data-full="media/rc-real.jpg" aria-label="Enlarge: Root Cause live page, root cause tab"><img src="media/rc-real.jpg" alt="Root Cause live page, root cause tab" loading="lazy"><span class="shot__cap">Live page: Root cause</span></button></div>
+            <div class="stage__foot">Reads demo quality records. Nothing is written.</div></div>
+        </div>
+        <div class="block rv"><div class="block__title">How the live page runs</div><div class="flow4"><div class="fl fl--1" style="--i:0"><div class="fl__ic"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div><div class="fl__k">1 &middot; LN data</div><div class="fl__t">Reads reports, receipts, inspections and lots</div></div><div class="fl-conn" style="--i:0" aria-hidden="true"><i></i></div><div class="fl fl--2" style="--i:1"><div class="fl__ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M11 8v3M11 14h.01"/></svg></div><div class="fl__k">2 &middot; Find</div><div class="fl__t">Scores the likely causes</div></div><div class="fl-conn" style="--i:1" aria-hidden="true"><i></i></div><div class="fl fl--3" style="--i:2"><div class="fl__ic"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></div><div class="fl__k">3 &middot; GenAI</div><div class="fl__t">Scopes affected stock, orders and shipments</div></div><div class="fl-conn" style="--i:2" aria-hidden="true"><i></i></div><div class="fl fl--4" style="--i:3"><div class="fl__ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M2 21v-1a6 6 0 016-6h2"/><path d="M15 18l2 2 4-4"/></svg></div><div class="fl__k">4 &middot; Person</div><div class="fl__t">Quality decides the next step</div></div></div></div>
+        <div class="meta-row" style="margin-top:20px"><span class="tag">Early</span><span class="tag tag--p">Phase 2</span><span class="tag tag--live">In the demo tenant</span></div>
+      </section>
+
+      <!-- ===================== 5. NEXT STEPS ===================== -->
+      <section class="page" id="page-next">
+        <div class="head"><div>
+          <div class="eyebrow">Area 5 &middot; Next steps</div>
+          <h1 class="title">Where we go from here</h1>
+          <p class="lede">We pick one use case, work it with its owner, and agree where a person stays in the loop.</p>
+        </div></div>
+        <div class="steps">
+          <div class="step rv"><h4>Choose the first use case</h4><p>One use case and one owner from your team.</p></div>
+          <div class="step rv rv-d1"><h4>Work it with the owner</h4><p>A working session per use case to walk the live page together.</p></div>
+          <div class="step rv rv-d2"><h4>Share samples</h4><p>Layouts and examples shape the design. Your data stays out of the demo tenant.</p></div>
+          <div class="step rv rv-d3"><h4>Set the limits</h4><p>What an agent may do on its own, and what needs a person.</p></div>
+        </div>
+        <div class="block rv">
+          <div class="block__title">How these run in your environment</div>
+          <div class="themes" style="margin-top:12px">
+            <div class="theme"><div class="theme__k">In your tenant</div><p>A page on your Infor home page. It sees only what the signed-in user can see.</p></div>
+            <div class="theme"><div class="theme__k">A person decides</div><p>It reads LN. A reminder, a date or an order change waits for a person.</p></div>
+            <div class="theme"><div class="theme__k">Shows its source</div><p>Each view links to the LN records behind it, so bad data is easy to find and fix.</p></div>
+            <div class="theme"><div class="theme__k">Your processes</div><p>It sits on the processes and data you standardize, and points at the exceptions.</p></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged screenshot" hidden><button class="lightbox__x" type="button" aria-label="Close">&times;</button><img alt=""><div class="lightbox__cap"></div></div>
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
