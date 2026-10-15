@@ -845,3 +845,5 @@ small { font-size: 15px; }
 /* Method numbers: a small solid gradient badge, not outlined digits */
 .mt__num { width: 36px; height: 36px; border-radius: 10px; display: grid !important; place-items: center; font-size: 17px !important; font-weight: 800; line-height: 1; color: #fff !important; -webkit-text-stroke: 0 !important; background: linear-gradient(135deg, #6a2fe0, #2387e6); box-shadow: 0 6px 16px rgba(74,84,234,.28); margin: 2px 0 14px !important; }
 .mt__num text { fill: #fff !important; stroke: none !important; opacity: 1 !important; font-size: 34px !important; }
+.morph.m-done:not(.m-all) .morph__hubin { padding: 0; border-width: 0; }
+.morph__hubin { transition: padding .9s var(--ease); }
