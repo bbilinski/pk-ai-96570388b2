@@ -847,3 +847,8 @@ small { font-size: 15px; }
 .mt__num text { fill: #fff !important; stroke: none !important; opacity: 1 !important; font-size: 34px !important; }
 .morph.m-done:not(.m-all) .morph__hubin { padding: 0; border-width: 0; }
 .morph__hubin { transition: padding .9s var(--ease); }
+/* Stack rows: chips grow to fill every row, no empty slots; coming-soon chips in the slide's gold */
+.s5__pills { display: flex !important; flex-wrap: wrap; gap: 10px; }
+.s5__pills > span { flex: 1 1 160px; }
+.s5 .s5__pills > span.s5__soon { background: #f2b533 !important; color: #2a1f00 !important; border: 1px solid #e0a321 !important; box-shadow: 0 6px 16px rgba(242,181,51,.35); }
+.s5 .s5__pills > span.s5__soon em { color: #5a3d00; }
