@@ -684,3 +684,4 @@ a.rm__item--opp small svg { flex: 0 0 13px; width: 13px; height: 13px; margin-to
 .fx__b { z-index: -1; }
 .out.fx { height: auto; min-height: max-content; overflow: visible; }
 .out.fx:hover { transform: translateY(-2px); background: #fff; }
+.out .fx__b { display: none; }
