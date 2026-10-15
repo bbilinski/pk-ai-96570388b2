@@ -200,7 +200,7 @@
     document.querySelectorAll(".card__desc, .note, .path5__you span").forEach(function (el) {
       el.innerHTML = el.innerHTML.replace(/\b5 use cases\b/, words[n] + " use cases").replace(/\bAll 5\b/, n === 2 ? "Both" : "All " + n).replace(/\bYour 5 prototypes\b/, "Your " + words[n] + " prototypes");
     });
-    document.querySelectorAll(".cards--row5, .cards--5").forEach(function (g) {
+    document.querySelectorAll(".cards--row5").forEach(function (g) {
       g.style.gridTemplateColumns = "repeat(" + n + ", minmax(0, 1fr))";
       Array.prototype.forEach.call(g.children, function (c) { c.style.gridColumn = "auto"; });
     });
