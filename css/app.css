@@ -709,3 +709,13 @@ a.rm__item--opp:hover { border-color: #c9bff5; border-left-color: var(--purple);
 .hp--1 .hp__t, .hp--1.fx:hover .hp__t, .hp--1 .hp__head:hover .hp__t { color: #fff; }
 .hp--1 .hp__head:hover { background: var(--ai); background-size: 200% 100%; }
 .hp--1 .hp__head :is(.hp__d, .hp__n) { color: rgba(255,255,255,.9); }
+/* Her ask: bigger, more readable text; no icons on the method tiles */
+.mt__ic { display: none; }
+.mt__num { position: static; display: block; margin: 4px 0 10px; }
+.mt h4 { font-size: 24px; }
+.mt p, .theme p, .gt p { font-size: 18px; line-height: 1.5; }
+.moment p, .moment__t, .card__desc, .stage li, .heard__p, .fl p, .jn p, .hc__d, .rm__item { font-size: 18px; line-height: 1.5; }
+.theme__k, .gt__k, .moment__area, .stage__k { font-size: 14px; letter-spacing: .12em; }
+.block h3, .theme h3 { font-size: 30px; }
+.lede, .block .sub, .sec-sub { font-size: 20px; }
+small { font-size: 15px; }
