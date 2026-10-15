@@ -700,3 +700,12 @@ a.rm__item--opp small svg { flex: 0 0 13px; width: 13px; height: 13px; margin-to
 .s5__icons svg { width: 30px; height: 30px; fill: none; stroke: rgba(255,255,255,.85); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 @media (max-width: 1240px) { .s5 { grid-template-columns: 220px 1fr; } }
 @media (max-width: 860px) { .s5 { grid-template-columns: 1fr; } }
+/* Fix (her "wonky"): View never overlaps text; opportunity hover is one clean border; Phase 1 title stays white */
+a.rm__item--opp { padding-right: 76px; position: relative; }
+a.rm__item--opp .fx__b { display: none; }
+a.rm__item--opp:hover { border-color: #c9bff5; border-left-color: var(--purple); }
+.rm__item .fx__go { right: 14px; bottom: 50%; transform: translate(-10px, 50%); }
+.fx:hover.rm__item .fx__go, .rm__item.fx:hover .fx__go { transform: translate(0, 50%); }
+.hp--1 .hp__t, .hp--1.fx:hover .hp__t, .hp--1 .hp__head:hover .hp__t { color: #fff; }
+.hp--1 .hp__head:hover { background: var(--ai); background-size: 200% 100%; }
+.hp--1 .hp__head :is(.hp__d, .hp__n) { color: rgba(255,255,255,.9); }
