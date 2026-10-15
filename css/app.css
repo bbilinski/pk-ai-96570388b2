@@ -685,3 +685,18 @@ a.rm__item--opp small svg { flex: 0 0 13px; width: 13px; height: 13px; margin-to
 .out.fx { height: auto; min-height: max-content; overflow: visible; }
 .out.fx:hover { transform: translateY(-2px); background: #fff; }
 .out .fx__b { display: none; }
+
+/* Round 7: the stack, 6 layers as on the platform slide */
+.s5 { grid-template-columns: 300px 1fr; }
+.s5__name { font-size: 16.5px; }
+.s5--1 { background: #efeafd; color: var(--ink); } .s5--1 .s5__pills span { background: #fff; border: 1px solid #d9d2f7; color: var(--ink); }
+.s5--2 { background: #ddd3f9; color: #23135e; } .s5--2 .s5__pills span { background: #5a2fd0; color: #fff; border: 0; }
+.s5--3 { background: #c8bbf4; color: #1d1050; } .s5--3 .s5__pills span { background: #4b23b8; color: #fff; border: 0; }
+.s5--4 { background: #b3a3ee; color: #170c45; } .s5--4 .s5__pills span { background: #3d1a9e; color: #fff; border: 0; }
+.s5--5 { background: #3b1a9e; color: #fff; } .s5--5 .s5__pills span { background: rgba(10,6,40,.55); color: #fff; border: 0; }
+.s5--6 { background: #160e3a; color: #fff; } .s5--6 .s5__pills span { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); color: #fff; }
+.s5--5 .s5__name, .s5--6 .s5__name { font-size: 16.5px; }
+.s5__icons { grid-column: 1 / -1; display: flex; justify-content: space-around; padding: 6px 4px 2px; }
+.s5__icons svg { width: 30px; height: 30px; fill: none; stroke: rgba(255,255,255,.85); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 1240px) { .s5 { grid-template-columns: 220px 1fr; } }
+@media (max-width: 860px) { .s5 { grid-template-columns: 1fr; } }
