@@ -171,3 +171,39 @@
   window.addEventListener("hashchange", route);
   route();
 })();
+
+/* Hide use cases listed in window.HIDE_CASES: their pages, nav entries, cards and chips.
+ * Roadmap cards stay (they are the Hub), but stop linking to a hidden page. */
+(function hideCases() {
+  var hide = (window.HIDE_CASES || []);
+  if (!hide.length) return;
+  function run() {
+    hide.forEach(function (id) {
+      var page = document.getElementById("page-real-" + id);
+      if (page) page.remove();
+      document.querySelectorAll('[data-go="real-' + id + '"], a[href="#real-' + id + '"]').forEach(function (el) {
+        if (el.classList.contains("fcard") || el.classList.contains("rm__item")) {
+          el.removeAttribute("href"); el.removeAttribute("data-go");
+          el.style.cursor = "default";
+          var go = el.querySelector(".fx__go"); if (go) go.remove();
+        } else {
+          el.remove();
+        }
+      });
+    });
+    var names = { "cash-application": "Cash Application", "engineering-release": "Engineering Release", "quality-root-cause": "Quality Root Cause" };
+    document.querySelectorAll(".hero__chips span").forEach(function (s) {
+      hide.forEach(function (id) { if (s.textContent.trim() === names[id]) s.remove(); });
+    });
+    var n = 5 - hide.length;
+    var words = { 1: "1", 2: "2", 3: "3", 4: "4" };
+    document.querySelectorAll(".card__desc, .note, .path5__you span").forEach(function (el) {
+      el.innerHTML = el.innerHTML.replace(/\b5 use cases\b/, words[n] + " use cases").replace(/\bAll 5\b/, n === 2 ? "Both" : "All " + n).replace(/\bYour 5 prototypes\b/, "Your " + words[n] + " prototypes");
+    });
+    document.querySelectorAll(".cards--row5, .cards--5").forEach(function (g) {
+      g.style.gridTemplateColumns = "repeat(" + n + ", minmax(0, 1fr))";
+      Array.prototype.forEach.call(g.children, function (c) { c.style.gridColumn = "auto"; });
+    });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
+})();
