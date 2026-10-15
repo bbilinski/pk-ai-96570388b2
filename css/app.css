@@ -635,13 +635,13 @@ a.rm__item--opp small svg { flex: 0 0 13px; width: 13px; height: 13px; margin-to
 
 /* Round 6: dynamic hover for theme, environment and method tiles */
 .fx { position: relative; isolation: isolate; transition: transform .35s var(--ease), box-shadow .35s var(--ease), opacity .6s var(--ease); transition-delay: calc(var(--i, 0) * .1s); }
-.fx::after { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 2px; z-index: 2; pointer-events: none;
+.fx__b { position: absolute; inset: -1px; border-radius: inherit; padding: 2px; z-index: 2; pointer-events: none;
   background: conic-gradient(from var(--ang, 0deg), #6a2fe0, #2387e6, #DA1217, #6a2fe0);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
   opacity: 0; transition: opacity .35s var(--ease); }
 @property --ang { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
 .fx:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(74,84,234,.20), 0 0 0 1px rgba(143,107,255,.15), 0 0 28px rgba(143,107,255,.22); transition-delay: 0s; }
-.fx:hover::after { opacity: 1; animation: sweepBorder 1.6s linear infinite; }
+.fx:hover > .fx__b { opacity: 1; animation: sweepBorder 1.6s linear infinite; }
 @keyframes sweepBorder { to { --ang: 360deg; } }
 .fx__ic { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; margin-bottom: 12px; background: linear-gradient(135deg, rgba(106,47,224,.16), rgba(35,135,230,.16)); transition: transform .35s var(--ease), background .35s; }
 .fx__ic svg { width: 22px; height: 22px; fill: none; stroke: #4b23b8; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
@@ -650,4 +650,33 @@ a.rm__item--opp small svg { flex: 0 0 13px; width: 13px; height: 13px; margin-to
 .theme__k, .gt__k { transition: color .3s; }
 .fx:hover .theme__k, .fx:hover .gt__k { color: var(--purple); }
 .theme.fx { box-shadow: var(--shadow); }
-@media (prefers-reduced-motion: reduce) { .fx:hover { transform: none; } .fx:hover::after { animation: none; } .fx:hover .fx__ic, .fx:hover .gt__ic, .fx:hover .mt__ic { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .fx:hover { transform: none; } .fx:hover > .fx__b { animation: none; } .fx:hover .fx__ic, .fx:hover .gt__ic, .fx:hover .mt__ic { transform: none; } }
+.fx__b { display: block; }
+.fx:hover :is(.theme__k, .gt__k, .fl__k, .moment__area, .rm__head, .hp__t, .card__num, .mt h4, .jn h4, .card__title) { color: var(--purple); }
+.fx:not(.stage--real):hover .stage__k { color: var(--purple); }
+.fx:hover :is(.card__icon, .fl__ic, .jn__ic, .hq__n, .ps__dot, .out i, .hp__c) { transform: scale(1.1); }
+.card__icon, .hq__n, .hp__c { transition: transform .35s var(--ease); }
+.block.fx:hover, .stage.fx:hover, .ai-hero.fx:hover, .method.fx:hover, .cta.fx:hover { transform: translateY(-4px); }
+.hp.fx:hover, .hc.fx:hover, .rm__item.fx:hover, .moment.fx:hover, .part.fx:hover { transform: translateY(-3px); }
+.fx__go { position: absolute; right: 14px; bottom: 12px; display: inline-flex; align-items: center; gap: 4px; font-size: 12.5px; font-weight: 700; color: var(--purple); opacity: 0; transform: translateX(-10px); transition: opacity .3s var(--ease), transform .3s var(--ease); z-index: 3; }
+.fx__go svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2.2; }
+.fx:hover .fx__go { opacity: 1; transform: none; }
+.rm__item .fx__go { bottom: 8px; right: 10px; }
+.card { display: flex; flex-direction: column; }
+.card .tags { margin-top: auto; padding-top: 12px; }
+.card .card__desc { margin-bottom: 4px; }
+.cards--row5 { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 1240px) {
+  .cards--row5 { grid-template-columns: repeat(6, 1fr); }
+  .cards--row5 > :nth-child(-n+3) { grid-column: span 2; }
+  .cards--row5 > :nth-child(n+4) { grid-column: span 3; }
+  .cards--5 { grid-template-columns: repeat(6, 1fr); }
+  .cards--5 > :nth-child(-n+3) { grid-column: span 2 !important; }
+  .cards--5 > :nth-child(n+4) { grid-column: span 3 !important; }
+}
+@media (max-width: 860px) { .cards--row5, .cards--5 { grid-template-columns: 1fr; } .cards--row5 > *, .cards--5 > * { grid-column: auto !important; } }
+@media (prefers-reduced-motion: reduce) { .fx:hover :is(.card__icon, .fl__ic, .jn__ic, .hq__n, .ps__dot, .out i, .hp__c) { transform: none; } .fx__go { transition: none; } }
+.fl.fx, .ps.fx, .jn.fx { border-radius: 14px; padding-top: 10px; padding-bottom: 10px; }
+.out.fx { border-radius: 14px; padding: 6px 8px; }
+:is(.block, .method, .ai-hero, .cta).fx:hover > .fx__b { opacity: .55; }
+.af-node.fx:hover { transform: translateY(-3px); }
