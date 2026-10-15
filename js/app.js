@@ -11,7 +11,12 @@
       var on = p.id === "page-" + target;
       p.classList.toggle("is-active", on);
       p.querySelectorAll("video").forEach(function (v) {
-        if (on) { var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); } else { v.pause(); }
+        if (!on) { v.pause(); return; }
+        if (v.classList.contains("once")) {
+          if (v.getAttribute("data-played")) return;
+          v.defaultPlaybackRate = 0.75; v.playbackRate = 0.75;
+        }
+        var pr = v.play(); if (pr && pr.catch) pr.catch(function () {});
       });
     });
 
@@ -115,12 +120,47 @@
       var ids = o.getAttribute("data-hub").split(" "), first = null;
       ids.forEach(function (id) {
         var c = document.getElementById(id); if (!c) return;
-        setPhase(c.closest(".hp"), true);
+        var hp0 = c.closest(".hp"); if (hp0) setPhase(hp0, true);
+        var mo = c.closest(".morph"); if (mo) mo.classList.add("m-pick", "m-done");
+        if (c.closest(".rest") && mo) mo.classList.add("r-open");
         c.classList.remove("is-flash"); void c.offsetWidth; c.classList.add("is-flash");
         if (!first) first = c;
       });
       if (first) setTimeout(function () { first.scrollIntoView({ behavior: "smooth", block: "center" }); }, 420);
     }
+  });
+
+  /* Area 3: the Hub video plays once at 0.75 speed, then offers Replay */
+  document.querySelectorAll("video.once").forEach(function (v) {
+    var wrap = v.closest(".hubvid"), btn = wrap ? wrap.querySelector(".replay") : null;
+    v.addEventListener("ended", function () { v.setAttribute("data-played", "1"); if (btn) btn.hidden = false; });
+    if (btn) btn.addEventListener("click", function () {
+      v.currentTime = 0; v.playbackRate = 0.75; btn.hidden = true;
+      var pr = v.play(); if (pr && pr.catch) pr.catch(function () {});
+    });
+  });
+
+  /* Area 3: Hub views morph into the clean lists, once, on scroll */
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function runMorph(m) {
+    if (m.getAttribute("data-ran")) return; m.setAttribute("data-ran", "1");
+    if (reduce) { m.classList.add("m-pick", "m-done"); return; }
+    setTimeout(function () { m.classList.add("m-pick"); }, 700);
+    setTimeout(function () { m.classList.add("m-done"); }, 2600);
+  }
+  var mio = "IntersectionObserver" in window ? new IntersectionObserver(function (es) {
+    es.forEach(function (en) { if (en.isIntersecting) { runMorph(en.target); mio.unobserve(en.target); } });
+  }, { root: main, threshold: 0.35 }) : null;
+  document.querySelectorAll(".morph").forEach(function (m) { if (mio) mio.observe(m); else runMorph(m); });
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest(".morph__all"); if (!b) return;
+    var m = b.closest(".morph");
+    var cls = m.getAttribute("data-morph") === "pha" ? "r-open" : "m-all";
+    var open = !m.classList.contains(cls);
+    m.classList.toggle(cls, open);
+    b.setAttribute("aria-expanded", open ? "true" : "false");
+    if (!b.getAttribute("data-label")) b.setAttribute("data-label", b.textContent);
+    b.textContent = open ? "Show less" : b.getAttribute("data-label");
   });
 
   /* SVG motion in the agents and people visual follows reduced motion */
