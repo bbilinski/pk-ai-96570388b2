@@ -632,3 +632,22 @@ a.rm__item--opp small svg { flex: 0 0 13px; width: 13px; height: 13px; margin-to
 .stage .shot img { object-position: left top; }
 .stage--heard li.hq { align-items: center; }
 .stage--heard li.hq .hq__n { align-self: center; }
+
+/* Round 6: dynamic hover for theme, environment and method tiles */
+.fx { position: relative; isolation: isolate; transition: transform .35s var(--ease), box-shadow .35s var(--ease), opacity .6s var(--ease); transition-delay: calc(var(--i, 0) * .1s); }
+.fx::after { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 2px; z-index: 2; pointer-events: none;
+  background: conic-gradient(from var(--ang, 0deg), #6a2fe0, #2387e6, #DA1217, #6a2fe0);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: 0; transition: opacity .35s var(--ease); }
+@property --ang { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+.fx:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(74,84,234,.20), 0 0 0 1px rgba(143,107,255,.15), 0 0 28px rgba(143,107,255,.22); transition-delay: 0s; }
+.fx:hover::after { opacity: 1; animation: sweepBorder 1.6s linear infinite; }
+@keyframes sweepBorder { to { --ang: 360deg; } }
+.fx__ic { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; margin-bottom: 12px; background: linear-gradient(135deg, rgba(106,47,224,.16), rgba(35,135,230,.16)); transition: transform .35s var(--ease), background .35s; }
+.fx__ic svg { width: 22px; height: 22px; fill: none; stroke: #4b23b8; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.fx:hover .fx__ic, .fx:hover .gt__ic, .fx:hover .mt__ic { transform: scale(1.12); }
+.gt__ic, .mt__ic { transition: transform .35s var(--ease); }
+.theme__k, .gt__k { transition: color .3s; }
+.fx:hover .theme__k, .fx:hover .gt__k { color: var(--purple); }
+.theme.fx { box-shadow: var(--shadow); }
+@media (prefers-reduced-motion: reduce) { .fx:hover { transform: none; } .fx:hover::after { animation: none; } .fx:hover .fx__ic, .fx:hover .gt__ic, .fx:hover .mt__ic { transform: none; } }
