@@ -101,6 +101,28 @@
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
   window.addEventListener("hashchange", closeLb);
 
+  /* Hub phases: expand and collapse */
+  function setPhase(hp, open) {
+    hp.classList.toggle("is-open", open);
+    var b = hp.querySelector(".hp__head"); if (b) b.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+  document.addEventListener("click", function (e) {
+    var h = e.target.closest(".hp__head");
+    if (h) { var hp = h.closest(".hp"); setPhase(hp, !hp.classList.contains("is-open")); return; }
+    var o = e.target.closest("[data-hub]");
+    if (o) {
+      e.preventDefault();
+      var ids = o.getAttribute("data-hub").split(" "), first = null;
+      ids.forEach(function (id) {
+        var c = document.getElementById(id); if (!c) return;
+        setPhase(c.closest(".hp"), true);
+        c.classList.remove("is-flash"); void c.offsetWidth; c.classList.add("is-flash");
+        if (!first) first = c;
+      });
+      if (first) setTimeout(function () { first.scrollIntoView({ behavior: "smooth", block: "center" }); }, 420);
+    }
+  });
+
   /* SVG motion in the agents and people visual follows reduced motion */
   if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     document.querySelectorAll("svg.orbit").forEach(function (svg) { if (svg.pauseAnimations) svg.pauseAnimations(); });
