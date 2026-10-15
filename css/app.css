@@ -837,3 +837,8 @@ small { font-size: 15px; }
 @media (max-width: 860px) { .cl-list, .fgrid, .fgrid--2, .rest__grid, .hpcols { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .morph__hub, .morph__clean, .rest, .cl, .fcard, .hchip, .hch, .hpc { transition: none !important; } }
 .morph.m-done :is(.cl, .fcard).fx:hover { transform: translateY(-4px); transition-delay: 0s; }
+/* Stack: chips fill the row evenly, no ragged gaps; next-gen and coming-soon chips in amber like the slide */
+.s5__pills { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; align-items: stretch; }
+.s5__pills > span { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 48px; }
+.s5__pills > .s5__soon { background: #f1b434; color: #2a1f00; border-color: #e0a321; font-weight: 700; }
+.s5__soon em { font-style: normal; font-size: 11px; font-weight: 800; letter-spacing: .08em; opacity: .8; }
